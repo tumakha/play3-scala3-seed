@@ -1,0 +1,8 @@
+addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.4")
+addSbtPlugin("org.foundweekends.giter8" % "sbt-giter8-scaffold" % "0.16.2")
+addSbtPlugin("org.scoverage"      % "sbt-scoverage"      % "2.1.0")
+addSbtPlugin("org.scalameta"      % "sbt-scalafmt"       % "2.5.2")
+addSbtPlugin("ch.epfl.scala"       % "sbt-scalafix"       % "0.12.1")
+addSbtPlugin("io.github.irundaia" % "sbt-sassify"        % "1.5.2")
+addSbtPlugin("com.typesafe.sbt"   % "sbt-digest"         % "1.1.4")
+addSbtPlugin("net.ground5hark.sbt" % "sbt-concat"         % "0.2.0")
