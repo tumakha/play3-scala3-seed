@@ -12,6 +12,7 @@ object AppDependencies {
   private val scalatestPlusScalacheckVersion = "3.2.19.0"
   private val scalaTestPlusMockitoVersion    = "3.2.19.0"
   private val flexMarkVersion                = "0.64.8"
+  private val wiremockVersion                = "3.8.0"
 
   private val compileDependencies = Seq(
     guice,
@@ -26,7 +27,8 @@ object AppDependencies {
     "org.scalatest"          %% "scalatest"          % scalatestVersion               % Test,
     "org.scalatestplus"      %% "scalacheck-1-18"    % scalatestPlusScalacheckVersion % Test,
     "org.scalatestplus"      %% "mockito-5-12"       % scalaTestPlusMockitoVersion    % Test,
-    "com.vladsch.flexmark"    % "flexmark-all"       % flexMarkVersion                % Test // for scalatest 3.2.x
+    "com.vladsch.flexmark"    % "flexmark-all"       % flexMarkVersion                % Test, // for scalatest 3.2.x,
+    "org.wiremock"            % "wiremock"           % wiremockVersion                % Test
   )
 
   val appDependencies: Seq[ModuleID] = compileDependencies ++ testDependencies
