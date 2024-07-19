@@ -1,14 +1,17 @@
 name := """play3-scala3-seed"""
 organization := "com.example"
-
 version := "1.0-SNAPSHOT"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+ThisBuild / scalaVersion := "3.4.2"
 
-scalaVersion := "3.4.2"
+lazy val root = (project in file("."))
+  .enablePlugins(PlayScala)
+  .settings(
+    PlayKeys.playDefaultPort := 8888,
+    libraryDependencies ++= AppDependencies.appDependencies
+  )
 
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test
+addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
