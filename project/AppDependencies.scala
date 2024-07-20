@@ -4,7 +4,7 @@ import sbt.*
 
 object AppDependencies {
 
-  private val jacksonModuleScalaVersion = "2.17.1"
+  private val jacksonModuleScalaVersion = "2.17.2"
 
   // Test dependencies
   private val scalaTestPlusPlayVersion       = "7.0.1"
