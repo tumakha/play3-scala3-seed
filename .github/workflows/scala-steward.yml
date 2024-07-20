@@ -1,7 +1,7 @@
 on:
   workflow_dispatch:
   schedule:
-    - cron: '5 12 * * *'
+    - cron: '5 5 * * *'
 
 name: Scala Steward
 
