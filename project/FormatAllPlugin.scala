@@ -27,9 +27,7 @@ object FormatAllPlugin extends AutoPlugin {
 
   override lazy val projectSettings: Seq[Setting[?]] =
     Seq(
-      commands += Command.command("coverage")(state =>
-        "formatAll" :: "set ThisBuild / coverageEnabled := true" :: state
-      ),
+      commands += Command.command("coverage")(state => "formatAll" :: "set ThisBuild / coverageEnabled := true" :: state),
       formatAll := Def
         .sequential(
           scalafmtAll,
