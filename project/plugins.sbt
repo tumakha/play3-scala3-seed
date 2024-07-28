@@ -1,6 +1,3 @@
-resolvers += MavenRepository("HMRC-maven2", "https://open.artefacts.tax.service.gov.uk/maven2")
-resolvers += Resolver.url("HMRC-ivy2", url("https://open.artefacts.tax.service.gov.uk/ivy2"))(Resolver.ivyStylePatterns)
-
 addSbtPlugin("org.playframework"  % "sbt-plugin"      % "3.0.5")
 addSbtPlugin("org.scoverage"      % "sbt-scoverage"   % "2.1.0")
 addSbtPlugin("org.scalameta"      % "sbt-scalafmt"    % "2.5.2")
