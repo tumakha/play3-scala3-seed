@@ -11,11 +11,6 @@ object AppDependencies {
   private val uniformVersion            = "4.10.0"
   private val jacksonModuleScalaVersion = "2.17.2"
   private val notifyClientVersion       = "5.1.0-RELEASE"
-  private val bootstrapVersion          = "9.1.0"
-  private val playFrontendVersion       = "10.5.0"
-  private val mongoVersion              = "2.2.0"
-  private val playLanguageVersion       = "8.0.0"
-  private val cryptoJsonVersion         = "8.0.0"
 
   // Test dependencies
   private val scalaTestPlusPlayVersion       = "7.0.1"
@@ -28,20 +23,14 @@ object AppDependencies {
   private val compileDependencies = Seq(
     guice,
     ws,
-    "org.typelevel"                %% "cats-effect"                % catsEffectVersion,
-    "com.fasterxml.jackson.module" %% "jackson-module-scala"       % jacksonModuleScalaVersion,
-    "org.apache.poi"                % "poi"                        % apachePOIVersion,
-    "org.apache.pdfbox"             % "pdfbox"                     % pdfBoxVersion,
-    "org.xhtmlrenderer"             % "flying-saucer-pdf-itext5"   % pdfItext5Version,
-    "com.luketebbs.uniform"        %% "interpreter-play28"         % uniformVersion cross CrossVersion.for3Use2_13,
+    "org.typelevel"                %% "cats-effect"               % catsEffectVersion,
+    "com.fasterxml.jackson.module" %% "jackson-module-scala"      % jacksonModuleScalaVersion,
+    "org.apache.poi"                % "poi"                       % apachePOIVersion,
+    "org.apache.pdfbox"             % "pdfbox"                    % pdfBoxVersion,
+    "org.xhtmlrenderer"             % "flying-saucer-pdf-itext5"  % pdfItext5Version,
+    "com.luketebbs.uniform"        %% "interpreter-play28"        % uniformVersion cross CrossVersion.for3Use2_13,
     // GOV.UK Notify service https://www.notifications.service.gov.uk
-    "uk.gov.service.notify"         % "notifications-java-client"  % notifyClientVersion,
-    // HMRC public artefacts
-    "uk.gov.hmrc"                  %% "bootstrap-frontend-play-30" % bootstrapVersion,
-    "uk.gov.hmrc"                  %% "play-frontend-hmrc-play-30" % playFrontendVersion,
-    "uk.gov.hmrc.mongo"            %% "hmrc-mongo-play-30"         % mongoVersion,
-    "uk.gov.hmrc"                  %% "play-language-play-30"      % playLanguageVersion,
-    "uk.gov.hmrc"                  %% "crypto-json-play-30"        % cryptoJsonVersion
+    "uk.gov.service.notify"         % "notifications-java-client" % notifyClientVersion
   )
 
   private val testDependencies = Seq(
