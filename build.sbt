@@ -11,6 +11,12 @@ lazy val root = (project in file("."))
     libraryDependencies ++= AppDependencies.appDependencies
   )
 
+excludeDependencies ++= Seq(
+  "org.typelevel"          % "cats-kernel_2.13",
+  "org.typelevel"          % "cats-core_2.13",
+  "org.scala-lang.modules" % "scala-parser-combinators_2.13"
+)
+
 addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
 
 // Adds additional packages into Twirl
