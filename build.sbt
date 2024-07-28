@@ -17,6 +17,14 @@ excludeDependencies ++= Seq(
   "org.scala-lang.modules" % "scala-parser-combinators_2.13"
 )
 
+resolvers ++= Resolver.sonatypeOssRepos("public") ++ Seq(
+  Resolver.jcenterRepo,
+  Resolver.typesafeRepo("releases"),
+  Resolver.typesafeIvyRepo("releases"),
+  MavenRepository("HMRC-open-artefacts-maven2", "https://open.artefacts.tax.service.gov.uk/maven2"),
+  Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefacts.tax.service.gov.uk/ivy2"))(Resolver.ivyStylePatterns)
+)
+
 addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
 
 // Adds additional packages into Twirl

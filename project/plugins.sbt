@@ -1,3 +1,8 @@
+resolvers ++= Seq(
+  Resolver.sbtPluginRepo("releases"),
+  Resolver.typesafeIvyRepo("releases")
+)
+
 addSbtPlugin("org.playframework"  % "sbt-plugin"      % "3.0.5")
 addSbtPlugin("org.scoverage"      % "sbt-scoverage"   % "2.1.0")
 addSbtPlugin("org.scalameta"      % "sbt-scalafmt"    % "2.5.2")
