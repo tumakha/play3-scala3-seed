@@ -30,6 +30,6 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         check-latest: true
-        cache: 'sbt'
+#        cache: 'sbt'
     - name: Run tests
       run: sbt clean coverage test coverageOff coverageReport
