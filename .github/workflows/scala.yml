@@ -30,6 +30,9 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         check-latest: true
-#        cache: 'sbt'
+        cache: 'sbt'
+        cache-dependency-path: |
+          build.sbt
+          project/build.properties
     - name: Run tests
       run: sbt clean coverage test coverageOff coverageReport
