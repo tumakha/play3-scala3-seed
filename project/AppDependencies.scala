@@ -23,7 +23,7 @@ object AppDependencies {
   private val scalatestPlusScalacheckVersion = "3.2.19.0"
   private val scalaTestPlusMockitoVersion    = "3.2.19.0"
   private val flexMarkVersion                = "0.64.8"
-  private val wiremockVersion                = "3.12.1"
+  private val wiremockVersion                = "3.13.0"
 
   private val compileDependencies = Seq(
     guice,
