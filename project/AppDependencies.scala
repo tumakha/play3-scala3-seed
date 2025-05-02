@@ -6,7 +6,7 @@ object AppDependencies {
 
   private val catsEffectVersion         = "3.6.1"
   private val apachePOIVersion          = "5.4.1"
-  private val pdfBoxVersion             = "3.0.4"
+  private val pdfBoxVersion             = "3.0.5"
   private val pdfItext5Version          = "9.7.2"
   private val uniformVersion            = "4.10.0"
   private val jacksonModuleScalaVersion = "2.19.0"
