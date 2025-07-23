@@ -4,7 +4,7 @@ import sbt.*
 
 object AppDependencies {
 
-  private val catsEffectVersion         = "3.6.2"
+  private val catsEffectVersion         = "3.6.3"
   private val apachePOIVersion          = "5.4.1"
   private val pdfBoxVersion             = "3.0.5"
   private val pdfItext5Version          = "9.7.2"
