@@ -10,8 +10,8 @@ object CodeCoverageSettings extends AutoPlugin {
   private val excludedFiles: Seq[String] = Seq(".*Routes.*")
 
   override lazy val projectSettings: Seq[Setting[?]] = Seq(
-    ScoverageKeys.coverageExcludedPackages := excludedPackages.mkString(";"),
-    ScoverageKeys.coverageExcludedFiles := excludedFiles.mkString(";"),
+    ScoverageKeys.coverageExcludedPackages := excludedPackages.mkString(","),
+    ScoverageKeys.coverageExcludedFiles := excludedFiles.mkString(","),
     ScoverageKeys.coverageMinimumStmtTotal := 74.3,
     ScoverageKeys.coverageFailOnMinimum := true,
     ScoverageKeys.coverageHighlighting := true
