@@ -20,7 +20,7 @@ permissions:
 jobs:
   build:
 
-    runs-on: ubuntu-22.04 # 22.04 with sbt installed
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -38,5 +38,9 @@ jobs:
         cache-dependency-path: |
           build.sbt
           project/build.properties
+    - uses: sbt/setup-sbt@v1
+    - name: Setup SBT
+      shell: bash
+      run: sbt -v +test
     - name: Run tests
       run: sbt clean coverage test coverageOff coverageReport
