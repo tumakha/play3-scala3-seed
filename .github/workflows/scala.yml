@@ -39,8 +39,5 @@ jobs:
           build.sbt
           project/build.properties
     - uses: sbt/setup-sbt@v1
-    - name: Setup SBT
-      shell: bash
-      run: sbt -v +test
     - name: Run tests
       run: sbt clean coverage test coverageOff coverageReport
