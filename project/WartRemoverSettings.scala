@@ -41,7 +41,8 @@ object WartRemoverSettings extends AutoPlugin {
       Wart.Overloading,
       Wart.FinalCaseClass,
       Wart.PlatformDefault,
-      Wart.While
+      Wart.While,
+      Wart.Any
     )
 
   private val testErrorOn: Seq[Wart] =
