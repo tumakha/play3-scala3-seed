@@ -17,7 +17,8 @@ excludeDependencies ++= Seq(
   "org.scala-lang.modules" % "scala-parser-combinators_2.13"
 )
 
-resolvers ++= Resolver.sonatypeOssRepos("public") ++ Seq(
+resolvers ++= Seq(
+  Resolver.sonatypeCentralSnapshots,
   Resolver.jcenterRepo,
   Resolver.typesafeRepo("releases"),
   Resolver.typesafeIvyRepo("releases"),
