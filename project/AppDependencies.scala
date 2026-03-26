@@ -19,7 +19,7 @@ object AppDependencies {
 
   // Test dependencies
   private val scalaTestPlusPlayVersion       = "7.0.2"
-  private val scalatestVersion               = "3.2.19"
+  private val scalatestVersion               = "3.2.20"
   private val scalatestPlusScalacheckVersion = "3.2.19.0"
   private val scalaTestPlusMockitoVersion    = "3.2.19.0"
   private val flexMarkVersion                = "0.64.8"
