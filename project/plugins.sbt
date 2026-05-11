@@ -5,7 +5,7 @@ resolvers ++= Seq(
 
 addSbtPlugin("org.playframework"  % "sbt-plugin"      % "3.0.10")
 addSbtPlugin("org.scoverage"      % "sbt-scoverage"   % "2.4.4")
-addSbtPlugin("org.scalameta"      % "sbt-scalafmt"    % "2.6.0")
+addSbtPlugin("org.scalameta"      % "sbt-scalafmt"    % "2.6.1")
 addSbtPlugin("ch.epfl.scala"      % "sbt-scalafix"    % "0.14.6")
 addSbtPlugin("org.wartremover"    % "sbt-wartremover" % "3.5.7")
 addSbtPlugin("io.github.irundaia" % "sbt-sassify"     % "1.5.2")
