@@ -20,7 +20,7 @@ object AppDependencies {
   // Test dependencies
   private val scalaTestPlusPlayVersion       = "7.0.2"
   private val scalatestVersion               = "3.2.20"
-  private val scalatestPlusScalacheckVersion = "3.2.19.0"
+  private val scalatestPlusScalacheckVersion = "3.2.20.0"
   private val scalaTestPlusMockitoVersion    = "3.2.19.0"
   private val flexMarkVersion                = "0.64.8"
   private val wiremockVersion                = "3.13.2"
@@ -49,7 +49,7 @@ object AppDependencies {
     "org.apache.pekko"       %% "pekko-testkit"      % PlayVersion.pekkoVersion       % Test,
     "org.scalatestplus.play" %% "scalatestplus-play" % scalaTestPlusPlayVersion       % Test,
     "org.scalatest"          %% "scalatest"          % scalatestVersion               % Test,
-    "org.scalatestplus"      %% "scalacheck-1-18"    % scalatestPlusScalacheckVersion % Test,
+    "org.scalatestplus"      %% "scalacheck-1-19"    % scalatestPlusScalacheckVersion % Test,
     "org.scalatestplus"      %% "mockito-5-12"       % scalaTestPlusMockitoVersion    % Test,
     "com.vladsch.flexmark"    % "flexmark-all"       % flexMarkVersion                % Test, // for scalatest 3.2.x,
     "org.wiremock"            % "wiremock"           % wiremockVersion                % Test
