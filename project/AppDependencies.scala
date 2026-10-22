@@ -11,11 +11,11 @@ object AppDependencies {
   private val uniformVersion            = "4.10.0"
   private val jacksonModuleScalaVersion = "2.22.4"
   private val notifyClientVersion       = "6.2.1-RELEASE"
-  private val bootstrapVersion          = "9.1.0"
-  private val playFrontendVersion       = "10.5.0"
-  private val mongoVersion              = "2.2.0"
-  private val playLanguageVersion       = "8.0.0"
-  private val cryptoJsonVersion         = "8.0.0"
+  private val bootstrapVersion          = "10.8.0"
+  private val playFrontendVersion       = "13.16.0"
+  private val mongoVersion              = "2.14.0"
+  private val playLanguageVersion       = "10.0.0"
+  private val cryptoJsonVersion         = "8.4.0"
 
   // Test dependencies
   private val scalaTestPlusPlayVersion       = "7.0.2"
