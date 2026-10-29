@@ -27,6 +27,7 @@ resolvers ++= Seq(
 )
 
 addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
+addCommandAlias("testCoverage", "clean;coverage;test;coverageOff;coverageReport;coverageAggregate;package")
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
