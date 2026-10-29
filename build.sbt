@@ -17,16 +17,14 @@ excludeDependencies ++= Seq(
   "org.scala-lang.modules" % "scala-parser-combinators_2.13"
 )
 
-given Patterns = Resolver.ivyStylePatterns
-
 resolvers ++= Seq(
   Resolver.typesafeRepo("releases"),
   Resolver.typesafeIvyRepo("releases"),
-  "hmrc-releases" at "https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases/",
-  "third-party-maven-releases" at "https://artefacts.tax.service.gov.uk/artifactory/third-party-maven-releases/",
-  Resolver.uri("third-party-ivy-releases", java.net.URI("https://artefacts.tax.service.gov.uk/artifactory/third-party-ivy-releases")),
-  "HMRC-open-artefacts-maven2" at "https://open.artefacts.tax.service.gov.uk/maven2",
-  Resolver.uri("HMRC-open-artefacts-ivy2", java.net.URI("https://open.artefacts.tax.service.gov.uk/ivy2"))
+  MavenRepository("hmrc-releases", "https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases/"),
+  MavenRepository("third-party-maven-releases", "https://artefacts.tax.service.gov.uk/artifactory/third-party-maven-releases/"),
+  Resolver.url("third-party-ivy-releases", url("https://artefacts.tax.service.gov.uk/artifactory/third-party-ivy-releases"))(Resolver.ivyStylePatterns),
+  MavenRepository("HMRC-open-artefacts-maven2", "https://open.artefacts.tax.service.gov.uk/maven2"),
+  Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefacts.tax.service.gov.uk/ivy2"))(Resolver.ivyStylePatterns)
 )
 
 addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
