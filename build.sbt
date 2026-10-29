@@ -17,13 +17,16 @@ excludeDependencies ++= Seq(
   "org.scala-lang.modules" % "scala-parser-combinators_2.13"
 )
 
+given Patterns = Resolver.ivyStylePatterns
+
 resolvers ++= Seq(
-  Resolver.sonatypeCentralSnapshots,
-  Resolver.jcenterRepo,
   Resolver.typesafeRepo("releases"),
   Resolver.typesafeIvyRepo("releases"),
-  MavenRepository("HMRC-open-artefacts-maven2", "https://open.artefacts.tax.service.gov.uk/maven2"),
-  Resolver.url("HMRC-open-artefacts-ivy2", url("https://open.artefacts.tax.service.gov.uk/ivy2"))(Resolver.ivyStylePatterns)
+  "hmrc-releases" at "https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases/",
+  "third-party-maven-releases" at "https://artefacts.tax.service.gov.uk/artifactory/third-party-maven-releases/",
+  Resolver.uri("third-party-ivy-releases", java.net.URI("https://artefacts.tax.service.gov.uk/artifactory/third-party-ivy-releases")),
+  "HMRC-open-artefacts-maven2" at "https://open.artefacts.tax.service.gov.uk/maven2",
+  Resolver.uri("HMRC-open-artefacts-ivy2", java.net.URI("https://open.artefacts.tax.service.gov.uk/ivy2"))
 )
 
 addCommandAlias("precommit", "clean;coverage;test;coverageOff;coverageReport;package")
