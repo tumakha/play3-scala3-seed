@@ -40,4 +40,4 @@ jobs:
           project/build.properties
     - uses: sbt/setup-sbt@v1
     - name: Run tests
-      run: sbt clean coverage test coverageOff coverageReport
+      run: sbt testCoverage
