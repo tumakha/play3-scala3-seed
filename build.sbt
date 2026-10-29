@@ -20,6 +20,8 @@ excludeDependencies ++= Seq(
 given Patterns = Resolver.ivyStylePatterns
 
 resolvers ++= Seq(
+  Resolver.sonatypeCentralSnapshots,
+  Resolver.jcenterRepo,
   Resolver.typesafeRepo("releases"),
   Resolver.typesafeIvyRepo("releases"),
   "hmrc-releases" at "https://artefacts.tax.service.gov.uk/artifactory/hmrc-releases/",
