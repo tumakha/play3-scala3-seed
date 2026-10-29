@@ -33,7 +33,7 @@ object AppDependencies {
     "org.apache.poi"                % "poi"                        % apachePOIVersion,
     "org.apache.pdfbox"             % "pdfbox"                     % pdfBoxVersion,
     "org.xhtmlrenderer"             % "flying-saucer-pdf-itext5"   % pdfItext5Version,
-    "com.luketebbs.uniform"        %% "interpreter-play28"         % uniformVersion cross CrossVersion.for3Use2_13,
+    ("com.luketebbs.uniform"       %% "interpreter-play28"         % uniformVersion).cross(CrossVersion.for3Use2_13),
     // GOV.UK Notify service https://www.notifications.service.gov.uk
     "uk.gov.service.notify"         % "notifications-java-client"  % notifyClientVersion,
     // HMRC public artefacts
