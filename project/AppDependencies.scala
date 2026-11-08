@@ -9,7 +9,7 @@ object AppDependencies {
   private val pdfBoxVersion             = "3.0.8"
   private val pdfItext5Version          = "9.7.2"
   private val uniformVersion            = "4.10.0"
-  private val jacksonModuleScalaVersion = "2.22.4"
+  private val jacksonModuleScalaVersion = "2.23.0"
   private val notifyClientVersion       = "6.2.1-RELEASE"
   private val bootstrapVersion          = "10.8.0"
   private val playFrontendVersion       = "13.16.0"
